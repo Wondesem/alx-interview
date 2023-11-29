@@ -12,7 +12,9 @@ def pascal_triangle(n):
     of integers representing the Pascal’s triangle of n
     """
     res = []
-    if n > 0:
+    if n <= 0:
+        return res
+    else:
         for i in range(1, n + 1):
             level = []
             C = 1
