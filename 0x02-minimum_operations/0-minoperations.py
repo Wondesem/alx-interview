@@ -5,6 +5,7 @@ method to determine the number of occurance of a letter
 """
 it returns an integer if n is impossible returns 0
 """
+
 def minOperations(n):
     now = 1
     start = 0
