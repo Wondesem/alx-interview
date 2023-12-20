@@ -5,6 +5,8 @@ method to determine the number of occurance of a letter
 """
 it returns an integer if n is impossible returns 0
 """
+
+
 def minOperations(n):
     at_movement = 1
     initial_value = 0
@@ -15,6 +17,12 @@ def minOperations(n):
             at_movement += initial_value
             counting += 2
         else:
+<<<<<<< HEAD
             at_movement += initial_value
             counting += 1
     return counting
+=======
+            now += start
+            counter += 1
+    return counter
+>>>>>>> 31bfe4ca6fef659e0b58e6929927a33393a68c82
