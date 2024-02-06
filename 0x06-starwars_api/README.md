@@ -72,3 +72,7 @@ Directory: 0x06-starwars_api
 File: 0-starwars_characters.js
    
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 57261ceea1bfc4dd8c3d4191095872ae45ef072c
