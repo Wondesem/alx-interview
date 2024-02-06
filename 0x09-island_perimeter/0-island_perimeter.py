@@ -8,8 +8,12 @@ The is list of integers where:
 - cells are connected horizontally/vertically (not diagonally)
 - grid is rectangle with width and height not exceeding 100
 """
+
+
 def island_perimeter(grid):
-    """A function that returns the perimeter of the island described in grid."""
+    """A function that returns the perimeter of
+    the island described in grid.
+    """
     perimeter = 0
     for i in range(len(grid)):
         for j in range(len(grid[i])):
