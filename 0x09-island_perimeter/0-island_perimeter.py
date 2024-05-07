@@ -23,7 +23,7 @@ def island_perimeter(grid):
                     per += 1
                 if(n <= 0 or grid[i][n - 1] == 0):
                     per += 1
-                if(n >= len(grid[i]) -1 or grid[i][n + 1] == 0):
+                if(n >= len(grid[i]) - 1 or grid[i][n + 1] == 0):
                     per += 1
 
     return per
