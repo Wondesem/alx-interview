@@ -3,6 +3,7 @@
 The app that returns all grid with water 0 and land 1
 """
 
+
 def island_perimeter(grid):
     """
     Finds the perimeter of island gridded
