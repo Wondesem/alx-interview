@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 This is an app that changes the coin into amount
 
+=======
+>>>>>>> 75d02383d8a5ec7e81e3b87cf4e6b8cc2a38002d
 
 Curriculum
 Short Specializations
