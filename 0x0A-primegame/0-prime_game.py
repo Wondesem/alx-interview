@@ -1,42 +1,29 @@
 #!/usr/bin/python3
-"""0. Prime Game - Maria and Ben are playing a game"""
+"""
+The app that returns all grid with water 0 and land 1
+"""
 
 
-def isWinner(x, nums):
-    """x - rounds
-    nums - numbers list
+def island_perimeter(grid):
     """
-    if x <= 0 or nums is None:
-        return None
-    if x != len(nums):
-        return None
-
-    ben = 0
-    maria = 0
-
-    a = [1 for x in range(sorted(nums)[-1] + 1)]
-    a[0], a[1] = 0, 0
-    for i in range(2, len(a)):
-        rm_multiples(a, i)
-
-    for i in nums:
-        if sum(a[0:i + 1]) % 2 == 0:
-            ben += 1
-        else:
-            maria += 1
-    if ben > maria:
-        return "Ben"
-    if maria > ben:
-        return "Maria"
-    return None
-
-
-def rm_multiples(ls, x):
-    """removes multiple
-    of primes
+    Finds the perimeter of island gridded
+    Args:
+        grid: 2 lists of integer with 0 (water) and 1 (land)
+    Return:
+        the perimeter of the island
     """
-    for i in range(2, len(ls)):
-        try:
-            ls[i * x] = 0
-        except (ValueError, IndexError):
-            break
+
+    per = 0
+    for i in range(len(grid)):
+        for n in range(len(grid[i])):
+            if(grid[i][n] == 1):
+                if(i <= 0 or grid[i - 1][n] == 0):
+                    per += 1
+                if(i >= len(grid) - 1 or grid[i + 1][n] == 0):
+                    per += 1
+                if(n <= 0 or grid[i][n - 1] == 0):
+                    per += 1
+                if(n >= len(grid[i]) - 1 or grid[i][n + 1] == 0):
+                    per += 1
+
+    return per
