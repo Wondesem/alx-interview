@@ -9,13 +9,17 @@ def island_perimeter(grid):
     returns grid sides 0 as water and 1 as land.
     """
 
-    perim = 0
-    for i in range(len(grid)):
-        for j in range(len(grid[i])):
-            if(i <= 0 or grid[i-1][j]==0):
-                perim += 1
-            if(i>=len(grid) -1 or grid[i+1][j] == 0):
-                perim += 1
-            if(j>=len(grid[i])-1 or grid[i][j+1]==0):
-                perim += 1
-    return perim
+    perimeter = 0
+    grid_length = len(grid)
+    for row in range(grid_length):
+        for column in range(len(grid[row])):
+            if grid[row][column] == 1:
+                if row - 1 < 0 or grid[row - 1][column] == 0:
+                    perimeter += 1
+                if column - 1 < 0 or grid[row][column - 1] == 0:
+                    perimeter += 1
+                if column + 1 >= len(grid[row]) or grid[row][column + 1] == 0:
+                    perimeter += 1
+                if row + 1 >= grid_length or grid[row + 1][column] == 0:
+                    perimeter += 1
+    return perimeter
